@@ -19,6 +19,84 @@
 
 
 	<script src="js/modernizr.js"></script>
+        <script >
+	 function buzhang(){
+		document.getElementById("name").innerHTML = '张启明'
+		document.getElementById("information").innerHTML = '资料1'
+		document.getElementById("qita").innerHTML = '其他资料1'
+		document.getElementById("class").innerHTML = '信管18021'
+		document.getElementById("zhuzhi").innerHTML = '住址1'
+		document.getElementById("email").innerHTML = '邮箱1'
+		document.getElementById("qq").innerHTML = 'qq1'
+		document.getElementById("wechat").innerHTML = '微信1'
+		}
+    function fubu1(){
+		document.getElementById("name").innerHTML = '姓名2'
+		document.getElementById("information").innerHTML = '资料2'
+		document.getElementById("qita").innerHTML = '其他资料2'
+		document.getElementById("class").innerHTML = '专业班级2'
+		document.getElementById("zhuzhi").innerHTML = '住址2'
+		document.getElementById("email").innerHTML = '邮箱2'
+		document.getElementById("qq").innerHTML = 'qq2'
+		document.getElementById("wechat").innerHTML = '微信2'
+		}
+		 function fubu2(){
+		document.getElementById("name").innerHTML = '姓名3'
+		document.getElementById("information").innerHTML = '资料3'
+		document.getElementById("qita").innerHTML = '其他资料3'
+		document.getElementById("class").innerHTML = '专业班级3'
+		document.getElementById("zhuzhi").innerHTML = '住址3'
+		document.getElementById("email").innerHTML = '邮箱3'
+		document.getElementById("qq").innerHTML = 'qq3'
+		document.getElementById("wechat").innerHTML = '微信3'
+		 }
+		 </script>
+         <script>
+		function checkform(){
+			if(checkname()&&checknumber()&&checkclass()&&checkdepartment()){
+				return true;
+			}else{
+				return false;
+		}
+		}
+  		function checkname(){
+			var e=document.Form.Name.value; 
+     		if (e.length==0)  //检测长度是否为0，即是否为空
+      {
+       		 alert("姓名不能为空!");
+       		 return false;
+			}
+			return true
+		}
+		function checknumber(){
+			var e=document.Form.number.value; 
+    		 if (e.length==0)  //检测长度是否为0，即是否为空
+      {
+       		 alert("联系方式不能为空!");
+     		 return false;
+			}
+			return true
+		}
+		function checkclass(){
+			var e=document.Form.class.value; 
+    		if (e.length==0)  //检测长度是否为0，即是否为空
+      {
+        	alert("专业班级不能为空!");
+        	return false;
+			}
+			return true
+		}
+		function checkdepartment(){
+			var e=document.Form.department.value; 
+     		if (e.length==0)  //检测长度是否为0，即是否为空
+      {
+        	alert("选择部门不能为空!");
+        	return false;
+			}
+			return true
+		}
+		 
+    </script>
 
 
 	<link rel="shortcut icon" href="favicon.png" >
@@ -49,9 +127,9 @@
       <div class="row banner">
          <div class="banner-text">
             <h1 class="responsive-headline">技术部</h1>
-            <h3>I'm a Manila based <span>graphic designer</span>, <span>illustrator</span> and <span>webdesigner</span> creating awesome and
-            effective visual identities for companies of all sizes around the globe. Let's <a class="smoothscroll" href="#about">start scrolling</a>
-            and learn more <a class="smoothscroll" href="#about">about me</a>.</h3>
+            <h3>两年的培训与磨砺换来的厚积薄发<br>
+            	玩转APP设计、项目开发、软件编程...<br>
+                虽然技术部是可爱滴，但没有什么能阻挡我成为大佬的脚步</h3>
             <hr />
             <ul class="social">
                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -78,13 +156,9 @@
 
      <div class="row">
       <div><select>
-      		<option value="成员1">成员1</option>
-            <option value="成员2">成员2</option>
-            <option value="成员3">成员3</option>
-            <option value="成员4">成员4</option>
-            <option value="成员5">成员5</option>
-            <option value="成员6">成员6</option>
-            <option value="成员7">成员7</option>
+      		<option value="成员1" onClick="buzhang()">部长—张启明</option>
+            <option value="成员2" onClick="fubu1()">副部—王木木</option>
+            <option value="成员3" onClick="fubu2()">副部—包余华</option>
       </select>
       </div>
 
@@ -94,25 +168,25 @@
 
          </div>
 
-         <div class="nine columns main-col">
+         <div class="nine columns main-col"  >
 
-            <h2>姓名1</h2>
+            <h2 id = "name">姓名1</h2>
 
-            <p>资料1
+            <p id = "information">资料1
            </p>
 
             <div class="row">
 
                <div class="columns contact-details">
 
-                  <h2>其他信息1</h2>
+                  <h2 id = "qita">其他信息1</h2>
                   <p class="address">
-						   <span>专业班级1</span><br>
-						   <span>住址1<br>
-						         邮箱1
+						   <span id = "class">专业班级1</span><br>
+						   <span id = "zhuzhi">住址1</span><br>
+						         <span id = "email">邮箱1
                     </span><br>
-						   <span>联系方式1（qq）</span><br>
-                     <span>联系方式2（微信）</span>
+						   <span id = "qq">联系方式1（qq）</span><br>
+                     <span id = "wechat">联系方式2（微信）</span>
 					   </p>
 
                </div>
@@ -146,11 +220,20 @@
 
                <div class="twelve columns">
 
-                  <h3>教学1</h3>
+                  <h3>前端</h3>
                  
 
                  <p>
-                  教学1
+                  本周进行前端的正式培训，希望大家提前做一下准备啦<br>
+课前准备<br>
+1.下载Visual Studio code(推荐)或者dreamweaver<br>
+2.在w3cshool在线教程(www.w3cschool.com.cn)或者从图书馆借阅一本html+css+js的书进行初步预习，尽量熟悉(或看完)html部分
+课程重点:<br>
+1.html表单<br>
+2.html内联元素与块级元素的区别与转换<br>
+3.html布局<br>
+4.css选择器<br>
+5.css定位(css部分内容依时间而定)
                  </p>
 
                </div>
@@ -161,11 +244,29 @@
 
                <div class="twelve columns">
 
-                  <h3>教学2</h3>
+                  <h3>github</h3>
               
 
                  <p>
-                  教学2
+                  【前言】
+以下作业仅为提高性作业，不要求每个人必须完成。作业中涉及git的部分全部要求通过git命令行完成。<br>
+ps:"D盘"仅作为参考，可以选择任意盘符。<br>
+
+【具体作业】<br>
+1.  clone一个仓库到本地的"D:\IMAW\git"文件目录下。<br>
+2.  在"D:\IMAW\git\MyFirstRepository"文件目录下新建任意文本文件，内容任意。将"D:\IMAW\git\MyFirstRepository"下的全部内容，提交到远程仓库（github）。<br>
+3. 修改文件目录下的任意文件，并提交修改到github。<br>
+4. 通过git命令行查看目录下，发生过改变的内容<br>。
+5.  将文件目录下的内容，回滚到最初始的版本。<br>
+
+【提交说明】<br>
+提交word文件，命名为"信协-技术部-第一次培训-18级XXX（姓名）"。<br>
+word内，按先后顺序放置关键信息的截图（主要包括命令行的命令、文件夹目录情况、相关操作执行成功结果）。
+
+此外，也可以在结尾处，整理习得的知识点和对git的理解，以及出现的问题和解决的思路。这样能更好的成长。<br>
+
+【注】<br>
+以后所有的作业统一提交到IMAW Tech R群各自名下的文件夹内。<br>
                  </p>
 
                </div>
@@ -250,7 +351,7 @@
 
          <div class="twelve columns collapsed">
 
-            <h1>Check Out Some of My Works.</h1>
+            <h1>瞧瞧我们的活动吧！</h1>
 
             <!-- portfolio-wrapper -->
             <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
@@ -259,11 +360,15 @@
                   <div class="item-wrap">
 
                      <a href="#modal-01" title="">
-                        <img alt="" src="images/portfolio/coffee.jpg">
+                        <img alt="" src="images/portfolio/ji_1.jpg">
                         <div class="overlay">
                            <div class="portfolio-item-meta">
-          					      <h5>活动1</h5>
-                              <p>活动1</p>
+          					      <h5>信协五周年年会!</h5>
+                              <p>五年前，信协是零到一；<br>
+								五年后，信协生生不息。<br>
+								今天的信协，<br>
+								有你有我，还有从未离开的他们。<br>
+							
           					   </div>
                         </div>
                         <div class="link-icon"><i class="icon-plus"></i></div>
@@ -276,11 +381,15 @@
                   <div class="item-wrap">
 
                      <a href="#modal-02" title="">
-                        <img alt="" src="images/portfolio/console.jpg">
+                        <img alt="" src="images/portfolio/ji_2.jpg">
                         <div class="overlay">
                            <div class="portfolio-item-meta">
-          					      <h5>活动2</h5>
-                              <p>活动2</p>
+          					      <h5>2019信协迎新！</h5>
+                              <p>策划部小品一念天堂<br>
+									综管部的钢管舞(划掉)手语舞你看不懂手<br>
+									公关部歌曲串烧 and 抖肩舞<br>
+									技术部舞蹈只因你太美<br>
+                                    你说这场面能不劲爆吗？肥仔快乐水配小零食，你说它能不香吗</p>
           					   </div>
                         </div>
                         <div class="link-icon"><i class="icon-plus"></i></div>
@@ -293,11 +402,17 @@
                   <div class="item-wrap">
 
                      <a href="#modal-03" title="">
-                        <img alt="" src="images/portfolio/judah.jpg">
+                        <img alt="" src="images/portfolio/ji_3.jpg">
                         <div class="overlay">
                            <div class="portfolio-item-meta">
-          					      <h5>活动3</h5>
-                              <p>活动3</p>
+          					      <h5>2018轰趴聚会！</h5>
+                              <p>信协人一一 在哪里都是最闪耀的ctrl键<br>
+								你以为我们只有手速快？<br>
+								no！我们嘴皮子也快如光速；<br>
+								你以为我们只敲代码？<br>
+								no！棋皇雀王and100%还原陈粒不在话下！<br>
+								你以为我们食量惊人？<br>
+								yes您猜对了……披萨卤蛋鸡翅风卷残云……</p>
           					   </div>
                         </div>
                         <div class="link-icon"><i class="icon-plus"></i></div>
@@ -310,11 +425,14 @@
                   <div class="item-wrap">
 
                      <a href="#modal-04" title="">
-                        <img alt="" src="images/portfolio/into-the-light.jpg">
+                        <img alt="" src="images/portfolio/ji_4.jpg">
                         <div class="overlay">
                            <div class="portfolio-item-meta">
-          					      <h5>活动4</h5>
-                              <p>活动4</p>
+          					      <h5>2018迎新大会！</h5>
+                              <p>你以为名字高大上的协会就一定正经吗？<br>
+                  不不不，我们——辣手剥得了柚子，靠气质吹得了笛子，做得了沙雕视频，<br>
+                  虽然很胖但是也能倔强地跳《卡路里》～<br>
+                  好看的皮囊千篇一律，有趣的灵魂信！协！都！有！</p>
           					   </div>
                         </div>
                         <div class="link-icon"><i class="icon-plus"></i></div>
@@ -401,11 +519,19 @@
 
          <div id="modal-01" class="popup-modal mfp-hide">
 
-		      <img class="scale-with-grid" src="images/portfolio/modals/m-coffee.jpg" alt="" />
+		      <img class="scale-with-grid" src="images/portfolio/ji_1.jpg" alt="" />
 
 		      <div class="description-box">
-			      <h4>活动1</h4>
-			      <p>活动1</p>
+			      <h4>信协五周年年会！</h4>
+			      <p>五年前，信协是零到一；<br>
+					五年后，信协生生不息。<br>
+					今天的信协，<br>
+					有你有我，还有从未离开的他们。<br>
+          			3月23日，<br>
+					从此，年满五岁的信协将伴着每一位信协人走向未来。<br>
+					你唱着歌，我跳着舞，<br>
+					只为说一句，<br>
+					信协——生日快乐！！！</p>
                <span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span>
 		      </div>
 
@@ -418,11 +544,16 @@
 
          <div id="modal-02" class="popup-modal mfp-hide">
 
-		      <img class="scale-with-grid" src="images/portfolio/modals/m-console.jpg" alt="" />
+		      <img class="scale-with-grid" src="images/portfolio/ji_2.jpg" alt="" />
 
 		      <div class="description-box">
-			      <h4>活动2</h4>
-			      <p>活动2</p>
+			      <h4>2019信协迎新！</h4>
+			      <p>策划部小品一念天堂<br>
+									综管部的钢管舞(划掉)手语舞你看不懂手<br>
+									公关部歌曲串烧 and 抖肩舞<br>
+									技术部舞蹈只因你太美<br>
+ 									活泼可爱的萌新们遇见有趣逗人的老干事，英俊美貌的皮囊下是各式各样有趣的灵魂，<br>
+                                    你说这场面能不劲爆吗？肥仔快乐水配小零食，你说它能不香吗</p>
                <span class="categories"><i class="fa fa-tag"></i>Branding, Web Development</span>
 		      </div>
 
@@ -435,11 +566,17 @@
 
          <div id="modal-03" class="popup-modal mfp-hide">
 
-		      <img class="scale-with-grid" src="images/portfolio/modals/m-judah.jpg" alt="" />
+		      <img class="scale-with-grid" src="images/portfolio/ji_3.jpg" alt="" />
 
 		      <div class="description-box">
-			      <h4>活动3</h4>
-			      <p>活动3</p>
+			      <h4>2018轰趴聚会！</h4>
+			      <p>信协人一一 在哪里都是最闪耀的ctrl键<br>
+								你以为我们只有手速快？<br>
+								no！我们嘴皮子也快如光速；<br>
+								你以为我们只敲代码？<br>
+								no！棋皇雀王and100%还原陈粒不在话下！<br>
+								你以为我们食量惊人？<br>
+								yes您猜对了……披萨卤蛋鸡翅风卷残云……</p>
                <span class="categories"><i class="fa fa-tag"></i>Branding</span>
 		      </div>
 
@@ -452,11 +589,16 @@
 
          <div id="modal-04" class="popup-modal mfp-hide">
 
-		      <img class="scale-with-grid" src="images/portfolio/modals/m-intothelight.jpg" alt="" />
+		      <img class="scale-with-grid" src="images/portfolio/ji_4.jpg" alt="" />
 
 		      <div class="description-box">
-			      <h4>活动4</h4>
-			      <p>活动4</p>
+			      <h4>2018迎新大会！</h4>
+			      <p>你以为名字高大上的协会就一定正经吗？<br>
+                  不不不，我们——辣手剥得了柚子，靠气质吹得了笛子，做得了沙雕视频，<br>
+                  虽然很胖但是也能倔强地跳《卡路里》～<br>
+                  好看的皮囊千篇一律，有趣的灵魂信！协！都！有！<br>
+					感谢各位巨佬前辈给讲的骚话，信协的萌新们必不负众望，好好加油的～<br>
+					很高兴见到你，一起去信协家玩好吗</p>
                <span class="categories"><i class="fa fa-tag"></i>Photography</span>
 		      </div>
 
@@ -566,17 +708,17 @@
 
                      <li>
                         <blockquote>
-                           <p>寄语1
+                           <p>代码之海，何其神秘，何其微茫，他却为寻得一丝光亮，奋力远航。水手啊！别再彷徨，灯塔就在远方，只要你敌得过风浪，你就是世界的王！
                           </p>
-                           <cite>寄语1谁说的</cite>
+                           <cite><!--寄语1谁说的--></cite>
                         </blockquote>
                      </li> <!-- slide ends -->
 
                      <li>
                         <blockquote>
-                           <p>寄语2
+                           <p>身怀壮志可凌云，心系信协尽忠心！
                           </p>
-                           <cite>寄语2谁说的</cite>
+                           <cite><!--寄语2谁说的--></cite>
                         </blockquote>
                      </li> <!-- slide ends -->
 
@@ -618,34 +760,32 @@
             <div class="eight columns">
 
                <!-- form -->
-               <form action="" method="post" id="contactForm" name="contactForm">
+               <form action="" method="post" id="Form" name="Form" onSubmit="return checkform()">
 					<fieldset>
 
                   <div>
-						   <label for="contactName">Name <span class="required">*</span></label>
-						   <input type="text" value="" size="35" id="contactName" name="contactName">
+						   <label for="Name">姓名<span class="required">*</span></label>
+						   <input type="text" value="" size="35" id="Name" name="Name">
                   </div>
 
                   <div>
-						   <label for="contactEmail">Email <span class="required">*</span></label>
-						   <input type="text" value="" size="35" id="contactEmail" name="contactEmail">
+						   <label for="number">联系方式（电话） <span class="required">*</span></label>
+						   <input type="text" value="" size="35" id="number" name="number">
                   </div>
+                  
 
                   <div>
-						   <label for="contactSubject">Subject</label>
-						   <input type="text" value="" size="35" id="contactSubject" name="contactSubject">
+						   <label for="class">专业班级 <span class="required">*</span></label>
+						   <input type="text" value="" size="35" id="Subject" name="Class">
+                  </div>
+                  
+                  <div>
+                     <label for="Message">自我介绍</label>
+                     <textarea cols="50" rows="15" id="Message" name="Message"></textarea>
                   </div>
 
-                  <div>
-                     <label for="contactMessage">Message <span class="required">*</span></label>
-                     <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
-                  </div>
-
-                  <div>
-                     <button class="submit">submit</button>
-                     <span id="image-loader">
-                        <img alt="" src="images/loader.gif">
-                     </span>
+                  <div style="text-align: center">
+                     <button  type="submit">submit</button>
                   </div>
 
 					</fieldset>
